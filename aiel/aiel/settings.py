@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -108,6 +109,9 @@ WSGI_APPLICATION = 'aiel.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','http://.127.0.0.1']
 
+
+
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -160,6 +164,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # settings.py
 MEDIA_URL = '/media/'
