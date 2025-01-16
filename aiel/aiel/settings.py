@@ -63,7 +63,8 @@ INSTALLED_APPS = [
     'board',
     'briefs',
     'community',
-    'resources'
+    'resources',
+    'contactapi'
 ]
 
 REST_FRAMEWORK = {
@@ -74,6 +75,9 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '5/min',  # Allow anonymous users 5 requests per minute
+    }
 }
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -179,3 +183,12 @@ MEDIA_ROOT = BASE_DIR / 'media/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.aielinstitute.org'  # Replace with your SMTP server
+EMAIL_PORT = 587  # Common port for TLS
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'info@aielinstitute.org'  # Your professional email address
+EMAIL_HOST_PASSWORD = 'your-email-password'  # Your email password
+DEFAULT_FROM_EMAIL = 'info@aielinstitute.org'
