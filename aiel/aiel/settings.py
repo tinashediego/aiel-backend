@@ -192,3 +192,44 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'info@aielinstitute.org'  # Your professional email address
 EMAIL_HOST_PASSWORD = 'your-email-password'  # Your email password
 DEFAULT_FROM_EMAIL = 'info@aielinstitute.org'
+
+
+TINYMCE_DEFAULT_CONFIG = {
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'theme': 'silver',
+    'plugins': '''
+            textcolor save link image media preview codesample contextmenu
+            table code lists fullscreen  insertdatetime  nonbreaking
+            contextmenu directionality searchreplace wordcount visualblocks
+            visualchars code fullscreen autolink lists  charmap print  hr
+            anchor pagebreak
+            ''',
+    'toolbar1': '''
+            fullscreen preview bold italic underline | fontselect,
+            fontsizeselect  | forecolor backcolor | alignleft alignright |
+            aligncenter alignjustify | indent outdent | bullist numlist table |
+            | link image media | codesample |
+            ''',
+    'toolbar2': '''
+            visualblocks visualchars |
+            charmap hr pagebreak nonbreaking anchor |  code |
+            ''',
+    'contextmenu': 'formats | link image',
+    'menubar': True,
+    'statusbar': True,
+    "images_upload_url": 'static/images/images',
+    "images_upload_handler": "tinymce_image_upload_handler",
+    
+}
+TINYMCE_EXTRA_MEDIA = {
+    'css': {
+        'all': [
+        ],
+    },
+    'js': [
+        "https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js",
+        "admin/js/tinymce-upload.js",
+    ], 
+}
