@@ -1,6 +1,6 @@
 from django.db import models
 
-class MediaApi(models.Model):
+class Mediaapi(models.Model):
     id = models.AutoField(primary_key=True)
     image = models.ImageField(upload_to='gallery_images/images/')
     media_name = models.CharField(max_length=255)

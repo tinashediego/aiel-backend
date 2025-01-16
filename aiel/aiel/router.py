@@ -6,6 +6,7 @@ from board.views import BoardViewSet
 from community.views import CommunityViewSet
 from briefs.views import BriefViewSet
 from resources.views import ResourceViewSet
+from mediaapi.views import MediaViewSet
 
 router = routers.DefaultRouter()
 router.register('team', TeamViewSet)
@@ -15,3 +16,4 @@ router.register('board', BoardViewSet)
 router.register('community', CommunityViewSet)
 router.register('brief', BriefViewSet)
 router.register('resource', ResourceViewSet)
+router.register('mediaapi', MediaViewSet)
