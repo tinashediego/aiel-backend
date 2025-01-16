@@ -9,7 +9,10 @@ class Board(models.Model):
     bio = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    
+    linkedin_url = models.CharField(max_length=255)
+    x_url = models.CharField(max_length=255)
+    email_address = models.EmailField(max_length=255)
+    phone_number = models.CharField(max_length=15)
     class Meta:
         verbose_name = "Board"
         verbose_name_plural = "Board"
