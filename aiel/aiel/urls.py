@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 
-from aiel.contactapi.views import ContactUsView
 from .router import router
 from django.urls import path, include
 from django.conf import settings
@@ -25,6 +24,4 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),
     path('api/v1/', include(router.urls)),
-    path('api/contact-us/', ContactUsView.as_view(), name='contact-us'),
-
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
