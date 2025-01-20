@@ -234,3 +234,6 @@ TINYMCE_EXTRA_MEDIA = {
         "admin/js/tinymce-upload.js",
     ], 
 }
+
+# settings.py
+CONTACT_US_EMAIL = 'info@aielinstitute.org'  # Email to receive the contact form
