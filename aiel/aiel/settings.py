@@ -187,12 +187,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.aielinstitute.org'  # Replace with your SMTP server
+EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server
 EMAIL_PORT = 587  # Common port for TLS
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'info@aielinstitute.org'  # Your professional email address
-EMAIL_HOST_PASSWORD = 'aiel#13@2019'  # Your email password
-DEFAULT_FROM_EMAIL = 'info@aielinstitute.org'
+EMAIL_HOST_USER = 'instituteaiel@gmail.com'  # Your professional email address
+EMAIL_HOST_PASSWORD = 'auvwpbvimtbiguui'  # Your email password
+DEFAULT_FROM_EMAIL = 'instituteaiel@gmail.com'
 
 
 TINYMCE_DEFAULT_CONFIG = {

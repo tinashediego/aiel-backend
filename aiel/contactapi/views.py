@@ -26,7 +26,7 @@ class ContactUsViewSet(viewsets.ModelViewSet):
             send_mail(
                 subject=f"New Contact Us Message from {contact.name}",
                 message=f"Name: {contact.name}\nEmail: {contact.email}\nPhone: {contact.phone}\nMessage: {contact.message}",
-                from_email='info@aielinstitute.org',  # Sender email
+                from_email='instituteaiel@gmail.com',  # Sender email
                 recipient_list=[settings.CONTACT_US_EMAIL],  # Admin email
                 fail_silently=False,
             )
