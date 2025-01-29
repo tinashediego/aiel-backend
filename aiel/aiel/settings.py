@@ -191,7 +191,7 @@ EMAIL_HOST = 'smtp.aielinstitute.org'  # Replace with your SMTP server
 EMAIL_PORT = 587  # Common port for TLS
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'info@aielinstitute.org'  # Your professional email address
-EMAIL_HOST_PASSWORD = 'your-email-password'  # Your email password
+EMAIL_HOST_PASSWORD = 'aiel#13@2019'  # Your email password
 DEFAULT_FROM_EMAIL = 'info@aielinstitute.org'
 
 
