@@ -11,8 +11,8 @@ class Resource(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     class Meta:
-        verbose_name = "Resource"
-        verbose_name_plural = "Resources"
+        verbose_name = "Guides and Toolkits"
+        verbose_name_plural = "Guides and Toolkits"
         ordering = ['created_at']
 
     def __str__(self):

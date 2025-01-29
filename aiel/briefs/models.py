@@ -12,8 +12,8 @@ class Brief(models.Model):
     footnote = models.TextField(verbose_name="Footnote")
 
     class Meta:
-        verbose_name = "Brief"
-        verbose_name_plural = "Briefs"
+        verbose_name = "Policy Briefs"
+        verbose_name_plural = "Policy Briefs"
 
     def __str__(self):
         return self.title

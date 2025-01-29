@@ -12,8 +12,8 @@ class Research(models.Model):
     image = models.ImageField(upload_to='research_images/', verbose_name="Image", null=True, blank=True)
 
     class Meta:
-        verbose_name = "Research"
-        verbose_name_plural = "Research Studies"
+        verbose_name = "Research Papers and Reports"
+        verbose_name_plural = "Research Papers and Reports"
 
     def __str__(self):
         return self.title
