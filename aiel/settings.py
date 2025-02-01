@@ -65,7 +65,8 @@ INSTALLED_APPS = [
     'community',
     'resources',
     'contactapi',
-    'mediaapi'
+    'mediaapi',
+    'subscription'
 ]
 
 REST_FRAMEWORK = {
