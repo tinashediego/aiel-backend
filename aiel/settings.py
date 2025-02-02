@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(_file_).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,21 +27,25 @@ SECRET_KEY = 'django-insecure-nk6khedk%_ik%u0efcg!o(qh#@i@lgl9hzzn)g2&b8$evjift2
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['*.wildroseplacement.com', 
-'www.backend.wildroseplacement.com', 
-'wildroseALB-460792832.us-east-2.elb.amazonaws.com',
- '127.0.0.1', '172.31.0.171', '3.143.241.230', 'localhost']
-
+ALLOWED_HOSTS = [
+    '191.101.1.79',                            # The IP address of your server
+    '191.101.1.79:8000',                       # The IP address with the port if accessing via port 8000
+    'https://aielinstitute.org',      # The AWS Amplify frontend domain
+    'localhost',                               # Localhost for local development
+    '127.0.0.1',
+    'localhost:3000',
+    'https://www.aielinstitute.org',
+    'https://backend.aielinstitute.org',
+    'https://www.backend.aielinstitute.org',
+    'backend.aielinstitute.org'
+]
 
 CORS_ALLOWED_ORIGINS = [
-     "http://localhost:3000",
-     "http://localhost:3001",
-    "http://127.0.0.1:9000",
-    "http://127.0.0.1:3000",
-    "http://127.0.0.1:3001",
-    "http://localhost",
-    "http://127.0.0.1",
 
+        'http://localhost:3000',
+        'https://www.aielinstitute.org',
+        'https://aielinstitute.org',
+        'https://backend.aielinstitute.org'
 ]
 
 
@@ -118,23 +122,26 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'aiel.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','http://.127.0.0.1']
-
-
-
+CSRF_TRUSTED_ORIGINS = ['http://localhost:3000','http://.127.0.0.1', 'https://backend.aielinstitute.org', 'https://www.backend.aielinstitute.org','https://www.aielinstitute.org', 'http://191.101.1.79', 'http://191.101.1.79:8000', 'https://aielinstitute.org/']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'aiel_main_database',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'PASSWORD': 'admin123',
+        'HOST': 'aiel-main-database.ctwgckq4ajwt.us-east-2.rds.amazonaws.com',
         'PORT': '5432',
-    }}
+    }
+}
+
+
+
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
 # Password validation
@@ -174,12 +181,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
 
 # settings.py
 MEDIA_URL = '/media/'
