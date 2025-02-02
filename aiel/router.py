@@ -9,6 +9,11 @@ from resources.views import ResourceViewSet
 from mediaapi.views import MediaViewSet
 from contactapi.views import ContactUsViewSet
 from subscription.views import SubscriptionViewSet
+from casestudy.views import CaseStudyViewSet
+from legalcommentary.views import LegalCommentaryViewSet
+from multimediaresource.views import MultimediaResourceViewSet
+from newsletter.views import NewsLetterViewSet
+from researchhighlight.views import ResearchHighlightViewSet
 
 router = routers.DefaultRouter()
 router.register('team', TeamViewSet)
@@ -21,3 +26,9 @@ router.register('resource', ResourceViewSet)
 router.register('mediaapi', MediaViewSet)
 router.register('contact', ContactUsViewSet)
 router.register('subscription', SubscriptionViewSet)
+router.register('casestudy', CaseStudyViewSet)
+router.register('legalcommentary', LegalCommentaryViewSet)
+router.register('multimediaresource', MultimediaResourceViewSet)
+router.register('newsletter', NewsLetterViewSet)
+router.register('researcjhoghlight', ResearchHighlightViewSet)
+

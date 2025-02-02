@@ -66,7 +66,12 @@ INSTALLED_APPS = [
     'resources',
     'contactapi',
     'mediaapi',
-    'subscription'
+    'subscription',
+    'casestudy',
+    'legalcommentary',
+    'newsletter',
+    'multimediaresource',
+    'researchhighlight'
 ]
 
 REST_FRAMEWORK = {
